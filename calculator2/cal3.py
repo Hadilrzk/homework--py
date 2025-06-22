@@ -29,12 +29,12 @@ def SQUARE_ROOT(x):
         return f"error: {e}"
 
 
-def getInput():
-    user_input = input()
-    if user_input.lower() == "exit":
+def Input():
+    userInput = input()
+    if userInput.lower() == "exit":
         print("Calculator closed.")
-        return "exit"
-    return user_input
+        return exit
+    return userInput
 
 def CALCULATOR():
     print("Welcome to the Calculator!")
@@ -50,13 +50,13 @@ def CALCULATOR():
 
     while True:
         print("Enter the number of your choice (1-7): ")
-        operation = getInput()
+        operation = Input()
         if operation == "exit":
             break
 
         if operation == '7':
             print("Enter number: ")
-            num = getInput()
+            num = Input()
             if num == "exit":
                 break
             try:
@@ -68,11 +68,11 @@ def CALCULATOR():
 
         elif operation in ["1", "2", "3", "4", "5", "6"]:
             print("Enter the first number: ")
-            num1 = getInput()
+            num1 = Input()
             if num1 == "exit":
                 break
             print("Enter the second number: ")
-            num2 = getInput()
+            num2 = Input()
             if num2 == "exit":
                 break
             try:
