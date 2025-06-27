@@ -1,0 +1,5 @@
+data = list(range(1, 21))
+print ("first 5 items", data[:5])
+print("lasts 5 items", data[-5:])
+print("every 3rd number", data[::3])
+print("reversed list", data[::-1])

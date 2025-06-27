@@ -33,7 +33,7 @@ def Input():
     userInput = input()
     if userInput.lower() == "exit":
         print("Calculator closed.")
-        return exit
+        return "exit"
     return userInput
 
 def CALCULATOR():
@@ -46,7 +46,7 @@ def CALCULATOR():
     print("4. Division")
     print("5. Modulus")
     print("6. Power")
-    print("7. Square-root")
+    print("7. Square-root")     
 
     while True:
         print("Enter the number of your choice (1-7): ")
