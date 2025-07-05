@@ -2,7 +2,6 @@ import fct
 
 tasks = []
 def to_do_list():
-    fct
     while True:
         fct.main()
         choice = input("Enter your choice (1-7, q): ").strip().lower()
