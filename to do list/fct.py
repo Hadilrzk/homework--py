@@ -1,5 +1,41 @@
 import random
 
+FileName= "C:/Users/dell/Favorites/Documents/homework---py/to do list/tasks.csv"
+def dict_to_list(task):
+    return list(task.values())
+
+def list_to_dict(data):
+    return {
+        'id': data[0],
+        'name': data[1],
+        'description': data[2],
+        'status': data[3],
+        'tag': data[4]
+    }
+
+def save_task(tasks_list, FileName):
+    with open(FileName, 'w') as f:
+        for task in tasks_list:
+            line= ','.join(dict_to_list(task)) + '\n'
+            f.write(line)
+
+def read_task(FileName):
+    tasks = []
+    try:
+        with open(FileName, 'r') as f:
+            for line in f:
+                parts = line.strip().split(',')
+                if len(parts) == 5:
+                    task = list_to_dict(parts)
+                    tasks.append(task)
+    except FileNotFoundError:
+        pass
+    return tasks
+
+
+
+
+
 def add_Task(tasks_list):
     name= input('enter task name: ').strip()
     description = input('enter task description:')
