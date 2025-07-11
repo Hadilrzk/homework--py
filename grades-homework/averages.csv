@@ -1,7 +1,6 @@
-Name, Average, Result
 Alice,84.33,Pass
 Bob,73.33,Pass
 Charlie,95.67,Pass
-Diana,55.0,Pass
+Diana,55.00,Pass
 Evan,83.67,Pass
-name,45.33,Fail
+
