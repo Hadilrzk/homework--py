@@ -1,7 +1,9 @@
 import fct
-filename= "C:/Users/dell/Favorites/Documents/homework---py/to do list/tasks.csv"
+
+filename = "C:/Users/dell/Favorites/Documents/homework---py/to do list/tasks.csv"
+tasks = fct.read_task(filename)
+
 def to_do_list():
-    tasks = fct.read_task(filename)
     while True:
         fct.main()
         choice = input("Enter your choice (1-7, q): ").strip().lower()
@@ -11,7 +13,7 @@ def to_do_list():
             break
         elif choice == "1":
             fct.add_Task(tasks)
-            fct.save_task(tasks,filename)
+            fct.save_task(tasks, filename)
         elif choice == "2":
             search_term = input("Enter task ID or Name to search: ").strip().lower()
             fct.search_task(tasks, search_term)
@@ -33,7 +35,3 @@ def to_do_list():
             print("Invalid choice. Please select 1-7 or 'q'.")
 
 to_do_list()
-
-
-       
-    
